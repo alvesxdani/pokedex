@@ -43,8 +43,10 @@ form.addEventListener('submit', (event) => {
 });
 
 btnPrev.addEventListener('click', () => {
-  searchPokemon -= 1;
-  renderPokemon(searchPokemon);
+  if(searchPokemon > 1) {
+    searchPokemon -= 1;
+    renderPokemon(searchPokemon);
+  }
 });
 
 btnNext.addEventListener('click', () => {
